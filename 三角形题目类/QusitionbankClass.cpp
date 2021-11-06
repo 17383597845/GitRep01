@@ -51,19 +51,19 @@ void QusitionbankClass::addqus()
 	if (type == 1)
 	{
 		std::stringstream ss;
-		double area = qus.area();
+		double area = qus.calarea();
 		ss << area;
 		ss >> stans;
 	}
 	else if (type == 2)
 	{
-		std::stringstream ss;
-		double c = qus.circum();
+		std::stringstream ss;//百度的，作用是将double转化为字符串
+		double c = qus.calcircum();
 		ss << c;
 		ss >> stans;
 	}
 	else if(type==3){
-		stans = qus.judge();
+		stans = qus.jud();
 	}
 	qus.setstAnswer(stans);//标准答案输入
 	qus.settype(type);//将题目类型输入
@@ -80,19 +80,19 @@ void QusitionbankClass::addqus(double a,double b,double c,int type) {
 	{
 		
 		std::stringstream ss;
-		double area = qus.area();
+		double area = qus.calarea();
 		ss << area;
 		ss >> stans;
 	}
 	else if (type == 2)
 	{
 		std::stringstream ss;
-		double c = qus.circum();
+		double c = qus.calcircum();
 		ss << c;
 		ss >> stans;
 	}
 	else if (type == 3) {
-		stans = qus.judge();
+		stans = qus.jud();
 	}
 	qus.setstAnswer(stans);
 	qus.settype(type);//将题目类型输入
@@ -117,6 +117,7 @@ void QusitionbankClass::delqus()
 			qusb[i] = qusb[i + 1];
 			a[i] = a[i + 1];
 		}
+		qusNum--;
 		std::cout << "您成功删除了第" << num << "题；" << std::endl;
 	}
 }
@@ -124,8 +125,8 @@ bool QusitionbankClass::work(int num, std::string ans)
 {
 	
 	if (num <= qusNum && num >= 0) {
-		qusb[num - 1].setuserAnswer(ans);
-		cal();
+		qusb[num - 1].setuserAnswer(ans);//存入用户答案
+		cal();//计算该题得分
 		return 1;
 	}
 	else {
@@ -170,7 +171,7 @@ void QusitionbankClass::search(int num)
 	}
 	else {
 		std::cout << "该三角形的：";
-		qusb[num - 1].dispall();
+		qusb[num - 1].disp();
 		if (qusb[num - 1].gettype() == 1)
 		{
 			std::cout << "该题题目类型是求三角形面积；\n";

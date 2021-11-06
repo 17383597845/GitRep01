@@ -19,11 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PolygonClass.h" />
     <ClInclude Include="QusitionbankClass.h" />
+    <ClInclude Include="RectangleClass.h" />
+    <ClInclude Include="SquareClass.h" />
     <ClInclude Include="TriangleClass.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="PolygonClass.cpp" />
     <ClCompile Include="QusitionbankClass.cpp" />
+    <ClCompile Include="RectangleClass.cpp" />
+    <ClCompile Include="SquareClass.cpp" />
     <ClCompile Include="TriangleClass.cpp" />
     <ClCompile Include="源.cpp" />
   </ItemGroup>

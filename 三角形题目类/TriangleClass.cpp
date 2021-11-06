@@ -11,7 +11,7 @@ TriangleClass::TriangleClass(double x1,double x2,double x3) {
 	this->x3 = x3;
 	this->userAnswer = "kong";
 }
-std::string TriangleClass::judge() {
+std::string TriangleClass::jud() {
 
 	if (this->x1 > this->x2 + this->x3 || this->x2 > this->x1 + this->x3 || this->x3 > this->x1 + this->x2) {
 		return "不是三角形";
@@ -88,15 +88,15 @@ void TriangleClass::settype(int type)
 {
 	this->type = type;
 }
-double TriangleClass::circum()
+double TriangleClass::calcircum()
 {
 	return this->x1 + this->x2 + this->x3;
 }
-double TriangleClass::area() {
-	double p = 0.5 * circum();
+double TriangleClass::calarea() {
+	double p = 0.5 * calcircum();
 	return sqrt(p * (p - this->x1) * (p - this->x2) * (p - this->x3));
 }
-void TriangleClass::dispall()
+void TriangleClass::disp()
 {
 	std::cout << "三边分别为" << this->x1 << ' ' << this->x2 << ' ' << this->x3 << std::endl;
 	//std::cout << "周长为" << circum() << std::endl;

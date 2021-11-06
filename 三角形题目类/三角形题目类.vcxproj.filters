@@ -21,6 +21,15 @@
     <ClInclude Include="QusitionbankClass.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="PolygonClass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SquareClass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleClass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TriangleClass.cpp">
@@ -30,6 +39,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="QusitionbankClass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PolygonClass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SquareClass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleClass.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
